@@ -38,6 +38,17 @@ const App = () =>{
 
    const [movies, setMovies] = useState([]);
    const [SearchTerm, setSearchTerm] =useState('');
+   //const [updated, setUpdated] = useState('');
+
+   //function handleKeyDown (event) {
+   const handleKeyDown = (event) => {
+      if (event.key === 'Enter') {
+        // 👇 Get input value
+        //setSearchTerm(event.target.value);
+        searchMovies(event.target.value);
+      }
+    };
+  
 
    const searchMovies = async(title) => {
       //const response = await fetch(`${API_URL}&s=${title}`);  //Good
@@ -54,19 +65,22 @@ const App = () =>{
 
    return (
       <div className='app'>
-         <h1>Movies</h1>
+         <h1>Movie Search ...</h1>
 
          <div className='search'>
             <input
             placeholder='Search for Movies'
             value= {SearchTerm}
-            onChange={(e) =>setSearchTerm(e.target.value)}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            //onKeyDown={handleKeyDown} 
+            onKeyDown={(e) => handleKeyDown(e)}           
             />
 
             <img
                src={SearchIcon}
                alt='search'
                onClick={() => searchMovies(SearchTerm)}
+               
             />
          </div>
 
@@ -80,7 +94,7 @@ const App = () =>{
             </div>
             ) : (
                <div className='empty'>
-                  <h2>No Movies Found my friendss!!</h2>
+                  <h2>No Movies Found</h2>
                </div>
             )
          };
