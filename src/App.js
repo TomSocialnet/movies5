@@ -94,7 +94,7 @@ const App = () =>{
             </div>
             ) : (
                <div className='empty'>
-                  <h2>No Movies Found</h2>
+                  <h2>No Movies Found - Try again!!</h2>
                </div>
             )
          };
