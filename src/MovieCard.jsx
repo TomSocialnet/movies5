@@ -15,7 +15,6 @@ const MovieCard = ({movie}) => {
          </div>
 
          <div>
-
             <h2>{movie.title}</h2>
             <p>{movie.overview}</p>
             <h4>Vote Count: {movie.vote_count} </h4>
