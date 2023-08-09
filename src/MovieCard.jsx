@@ -16,15 +16,14 @@ const MovieCard = ({movie}) => {
 
          <div>
 
-            <h3>{movie.title}</h3>
+            <h2>{movie.title}</h2>
             <p>{movie.overview}</p>
-            <br></br>
-            <span>Vote Count: {movie.vote_count} </span>
-            <p></p>
-            <span>Vote Avg: {movie.vote_average} </span>
-            <p></p>
-            <span>Popularity: {movie.popularity} </span>
-            <p></p>
+            <h4>Vote Count: {movie.vote_count} </h4>
+
+            <h4>Vote Avg: {movie.vote_average} </h4>
+
+            <h4>Popularity: {movie.popularity} </h4>
+    
             <h4>Release Date: {movie.release_date}</h4>
          </div>
 
