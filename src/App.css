@@ -18,7 +18,7 @@ body {
 }
 
 .app {
-  padding: 4rem;
+  padding: 3rem;
 
   display: flex;
   justify-content: center;
@@ -72,6 +72,7 @@ h1 {
   width: 35px;
   height: 35px;
   cursor: pointer;
+  padding-right: 0.5rem;
 }
 
 /* .search button {
@@ -132,7 +133,7 @@ h1 {
   position: absolute;
   padding: 16px;
   width: 100%;
-  opacity: 0;
+  opacity: 0.5;
   top: 0;
   color: #f9d3b4;
 }
@@ -153,7 +154,7 @@ h1 {
 }
 
 .movie div:nth-of-type(3) {
-  z-index: 2;
+  z-index: -1;
   background-color: #a7aaac;
   padding: 16px 24px 24px 24px;
 

@@ -7,7 +7,7 @@ const MovieCard = ({movie}) => {
    return (
       <div className='movie'>
          <div>
-            <p>{movie.release_date}</p>
+            <h4>{movie.release_date}</h4>
          </div>
 
          <div>
@@ -15,10 +15,19 @@ const MovieCard = ({movie}) => {
          </div>
 
          <div>
-            <h3>{movie.title}</h3>
+            <h2>{movie.title}</h2>
             <p>{movie.overview}</p>
+            <h4>Vote Count: {movie.vote_count} </h4>
+
+            <h4>Vote Avg: {movie.vote_average} </h4>
+
+            <h4>Popularity: {movie.popularity} </h4>
+    
+            <h4>Release Date: {movie.release_date}</h4>
          </div>
+
       </div>
+      
    )
 }
 

@@ -6,17 +6,19 @@ import SearchIcon from './search.svg';
 //4bb80060  #API-key
 const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=4bb80060';
 
-const API_URL_moviedb_start = 'https://api.themoviedb.org/3/search/movie?query=';
-const moviedb_movieName = 'batman';
+const API_URL_moviedb_start = 'https://api.themoviedb.org/3/search/multi?query=';
+
 const API_URL_moviedb_end = '&include_adult=false&language=en-US&page=1';
 
-const movie1 = {
-      "Title": "Spiderman",
-      "Year": "1990",
-      "imdbID": "tt0100669",
-      "Type": "movie",
-      "Poster": "N/A"
-  };
+//const moviedb_movieName = 'batman';
+
+// const movie1 = {
+//       "Title": "Spiderman",
+//       "Year": "1990",
+//       "imdbID": "tt0100669",
+//       "Type": "movie",
+//       "Poster": "N/A"
+//   };
 
   const options = {
     method: 'GET',
@@ -65,7 +67,7 @@ const App = () =>{
 
    return (
       <div className='app'>
-         <h1>Movie Search ...</h1>
+         <h1>Movie/TV</h1>
 
          <div className='search'>
             <input
@@ -91,13 +93,13 @@ const App = () =>{
                   {movies.map((movie) => (
                      <MovieCard movie={movie} />
                   ))}
-            </div>
+               </div>
             ) : (
                <div className='empty'>
-                  <h2>No Movies Found - Try again!!</h2>
+                  <h2>No Movies Found - Try again!</h2>
                </div>
             )
-         };
+         }
       </div>
    );
 
